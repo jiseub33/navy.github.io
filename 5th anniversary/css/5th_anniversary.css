@@ -84,7 +84,7 @@ section.start-message div {
 section.story {
     position: relative;
     padding: 0;
-    height: 600vh;
+    height: 1400vh;
     background: #000;
 }
 
@@ -124,6 +124,10 @@ section.story .sticky-wrap .background div {
 }
 
 section.story .sticky-wrap .background div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 100vh;
     opacity: 0;
     transition: 1s all;
@@ -134,10 +138,27 @@ section.story .sticky-wrap .title div {
     left: 50%;
     bottom: 10%;
     transform: translate(-50%, 150%);
+    width: 100%;
     color: #fff;
     opacity: 0;
     transition: .5s all;
 }
+
+section.story .sticky-wrap .title div b {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+section.story .sticky-wrap .title div h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+section.story .sticky-wrap .title div p {
+    font-size: 12.5px;
+    font-weight: 100;
+}
+
 
 /* 활성화 */
 
@@ -156,6 +177,7 @@ section.story .sticky-wrap .background div.past img {
 
 .with-number {
     padding: 0;
+    height: 100vh;
 }
 
 .with-number > h1 {
@@ -215,7 +237,7 @@ section.story .sticky-wrap .background div.past img {
 
 /* with-number individual style */
 
-.with-number ul li:nth-child(1)::after {
+.with-number ul:nth-child(2) li:nth-child(1)::after {
     content: "";
     position: absolute;
     left: 0;
@@ -225,21 +247,27 @@ section.story .sticky-wrap .background div.past img {
     background: url(../images/assets/members.png) no-repeat center / cover;
 }
 
-.with-number ul li:nth-child(1) div {
+.with-number ul:nth-child(2) li:nth-child(1) div {
     top: 35%;
 }
 
-.with-number ul li:nth-child(1) div p {
+.with-number ul:nth-child(2) li:nth-child(1) div p {
     padding: 0 0 10px 0;
     font-size: 15px;
 }
 
-.with-number ul li:nth-child(1) div h1 {
+.with-number ul:nth-child(2) li:nth-child(1) div h1 {
     font-size: 120px;
     line-height: 75px;
 }
 
-.with-number ul li:nth-child(2)::before {
+.with-number ul:nth-child(2) li:nth-child(1) div h1 span {
+    font-size: 50px;
+    line-height: 75px;
+    vertical-align: top;
+}
+
+.with-number ul:nth-child(2) li:nth-child(2)::before {
     content: "";
     position: absolute;
     left: 80%;
@@ -290,7 +318,7 @@ section.story .sticky-wrap .background div.past img {
     }
 }
 
-.with-number ul li:nth-child(2)::after {
+.with-number ul:nth-child(2) li:nth-child(2)::after {
     content: "";
     position: absolute;
     left: 80%;
@@ -340,23 +368,23 @@ section.story .sticky-wrap .background div.past img {
     }
 }
 
-.with-number ul li:nth-child(2) div {
+.with-number ul:nth-child(2) li:nth-child(2) div {
     top: 0;
     transform: translate(-55%, 150%) skew(50deg,-30deg);
     text-align: left;
 }
 
-.with-number ul li:nth-child(2) div p {
+.with-number ul:nth-child(2) li:nth-child(2) div p {
     padding: 0 0 5px 0;
     font-size: 15px;
 }
 
-.with-number ul li:nth-child(2) div h1 {
+.with-number ul:nth-child(2) li:nth-child(2) div h1 {
     font-size: 40px;
     line-height: 1;
 }
 
-.with-number ul li:nth-child(3)::b {
+.with-number ul:nth-child(2) li:nth-child(3)::b {
     content: "";
     position: absolute;
     left: 0;
@@ -366,7 +394,7 @@ section.story .sticky-wrap .background div.past img {
     background: rgba(5, 138, 255, 0.3);
 }
 
-.with-number ul li:nth-child(3)::before {
+.with-number ul:nth-child(2) li:nth-child(3)::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -389,7 +417,7 @@ section.story .sticky-wrap .background div.past img {
     }
 }
 
-.with-number ul li:nth-child(3)::after {
+.with-number ul:nth-child(2) li:nth-child(3)::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -411,17 +439,17 @@ section.story .sticky-wrap .background div.past img {
     }
 }
 
-.with-number ul li:nth-child(3) div {
+.with-number ul:nth-child(2) li:nth-child(3) div {
     top: 20%;
     transform: translate(-65%,20%) skew(50deg,-30deg);
 }
 
-.with-number ul li:nth-child(3) div p {
+.with-number ul:nth-child(2) li:nth-child(3) div p {
     padding: 0 0 20px 0;
     font-size: 15px;
 }
 
-.with-number ul li:nth-child(3) div h1 {
+.with-number ul:nth-child(2) li:nth-child(3) div h1 {
     font-size: 45px;
     line-height: 1;
 }
@@ -430,12 +458,22 @@ section.story .sticky-wrap .background div.past img {
     padding: 10px;
 }
 
+.event {
+    padding: 0;
+}
+
 .event div p {
+    padding: 5px;
     font-size: 15px;
     font-weight: 300;
 }
 
+.event div b {
+    font-weight: 700;
+}
+
 .event div h1 {
+    padding: 5px;
     font-size: 30px;
     font-weight: 900;
     line-height: 35px;
@@ -450,7 +488,7 @@ section.story .sticky-wrap .background div.past img {
     background: #000;
 }
 
-.event div div::after {
+.event div:nth-child(1) div::after {
     content: "전원지급";
     display: inline-block;
     position: absolute;
@@ -463,4 +501,61 @@ section.story .sticky-wrap .background div.past img {
     font-size: 10px;
     line-height: 10px;
     box-sizing: border-box;
+}
+
+.event div:nth-child(2) div::after {
+    content: "3명";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(25%,25%);
+    padding: 5px;
+    border-radius: 10px;
+    background: red;
+    font-size: 10px;
+    line-height: 10px;
+    box-sizing: border-box;
+}
+
+.event div a {
+    display: inline-block;
+    position: relative;
+    padding: 5px 15px;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.event div:nth-child(3) {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    color: #fff;
+    font-size: 0;
+}
+
+.event div:nth-child(3) h1 {
+    font-size: 12px;
+    line-height: 1;
+}
+
+.event div:nth-child(3) ul {
+    list-style: none;
+}
+
+.event div:nth-child(3) ul li b {
+    display: inline-block;
+    padding: 10px 0 0 0;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.event div:nth-child(3) ul li p {
+    font-size: 10px;
 }
