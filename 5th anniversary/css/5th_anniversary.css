@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Monsieur+La+Doulaise&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -937,37 +938,54 @@ section.story .sticky-wrap .background div.past img {
 
 .ending {
     position: relative;
-    margin: 20px 0 100px 0;
-    height: 300px;
-    background: url(../images/assets/circle.png) no-repeat center / 80%;
+    height: 600px;
+    background: url(../images/assets/sea.png) no-repeat bottom / cover;
 }
 
 .ending div {
     position: absolute;
+    bottom: 21%;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-20%);
     width: 100%;
 }
 
 .ending div h1 {
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 20px;
-    font-weight: 900;
+    margin: 20px auto;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.ending div p {
+    font-size: 15px;
+    font-weight: 100;
 }
 
 .ending div a {
     display: inline-block;
     position: relative;
     padding: 5px 15px;
-    margin: 10px 0 0 0;
-    background: rgba(0, 0, 0, 0.8);
+    margin: 20px auto;
+    background: #fff;
     border-radius: 50px;
-    color: #fff;
+    color: #000;
     font-size: 20px;
     font-weight: 900;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+.ending > h1 {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%,50%);
+    color: #fff;
+    font-family: "Pinyon Script", cursive;
+    font-size: 60px;
+    font-weight: 900;
+    filter: drop-shadow(0 0 40px #fff);
 }
 
 footer {
