@@ -877,6 +877,7 @@ section.story .sticky-wrap .background div.past img {
 }
 
 .event div div {
+    overflow: hidden;
     position: relative;
     margin: 20px auto;
     width: 200px;
@@ -885,19 +886,27 @@ section.story .sticky-wrap .background div.past img {
     background: #000;
 }
 
+.event div div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
 .event div:nth-child(1) div::after {
     content: "전원지급";
     display: inline-block;
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate(25%,25%);
-    padding: 5px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    border-radius: 10px 0 0 10px;
     background: red;
     font-size: 10px;
     line-height: 10px;
     box-sizing: border-box;
+    z-index: 1000;
 }
 
 .event div:nth-child(1) div::before,
@@ -920,9 +929,8 @@ section.story .sticky-wrap .background div.past img {
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate(25%,25%);
-    padding: 5px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    border-radius: 10px 0 0 10px;
     background: red;
     font-size: 10px;
     line-height: 10px;
@@ -949,8 +957,7 @@ section.story .sticky-wrap .background div.past img {
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate(25%,25%);
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 10px;
     background: red;
     font-size: 10px;
