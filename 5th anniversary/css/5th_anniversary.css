@@ -925,7 +925,7 @@ section.story .sticky-wrap .background div.past img {
 }
 
 .event div:nth-child(2) div::after {
-    content: "3명";
+    content: "1명";
     display: inline-block;
     position: absolute;
     right: 0;
